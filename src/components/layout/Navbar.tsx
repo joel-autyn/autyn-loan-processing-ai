@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import autynLogo from "@/assets/autyn-logo.png";
 
 const navLinks = [
@@ -39,7 +40,9 @@ export const Navbar = () => {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
             <Button variant="ghost">Log In</Button>
-            <Button>Schedule a Demo</Button>
+            <Button asChild>
+              <Link to="/demo">Schedule a Demo</Link>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -74,7 +77,9 @@ export const Navbar = () => {
               ))}
               <div className="flex flex-col gap-3 pt-4 border-t border-border">
                 <Button variant="outline" className="w-full">Log In</Button>
-                <Button className="w-full">Schedule a Demo</Button>
+                <Button className="w-full" asChild>
+                  <Link to="/demo" onClick={() => setIsOpen(false)}>Schedule a Demo</Link>
+                </Button>
               </div>
             </div>
           </motion.div>
