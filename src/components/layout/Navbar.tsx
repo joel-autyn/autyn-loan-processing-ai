@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import autynLogo from "@/assets/autyn-logo.png";
 
 const navLinks = [
   { name: "Product", href: "#features" },
@@ -18,11 +19,8 @@ export const Navbar = () => {
       <div className="container-narrow">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">A</span>
-            </div>
-            <span className="text-xl font-bold text-secondary">Autyn</span>
+          <a href="#" className="flex items-center">
+            <img src={autynLogo} alt="Autyn" className="h-8 w-auto" />
           </a>
 
           {/* Desktop Navigation */}

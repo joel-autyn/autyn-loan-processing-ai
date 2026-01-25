@@ -1,4 +1,5 @@
 import { Mail } from "lucide-react";
+import autynLogo from "@/assets/autyn-logo.png";
 
 const footerLinks = {
   product: [
@@ -27,11 +28,8 @@ export const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">A</span>
-              </div>
-              <span className="text-xl font-bold">Autyn</span>
+            <div className="mb-4">
+              <img src={autynLogo} alt="Autyn" className="h-8 w-auto brightness-0 invert" />
             </div>
             <p className="text-secondary-foreground/60 text-sm mb-4">
               AI-powered loan processing for the mortgage industry.
