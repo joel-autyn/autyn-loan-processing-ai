@@ -47,17 +47,7 @@ export const Footer = () => {
 
           {/* Legal */}
 
-          {/* Contact */}
-          <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
-            <a
-              href="mailto:info@autyn.ai"
-              className="inline-flex items-center gap-2 text-sm text-secondary-foreground/60 hover:text-primary transition-colors"
-            >
-              <Mail className="w-4 h-4" />
-              info@autyn.ai
-            </a>
-          </div>
+          {/* Legal */}
           <div>
             <h4 className="font-semibold mb-4">Legal</h4>
             <ul className="space-y-3">
@@ -81,6 +71,18 @@ export const Footer = () => {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-semibold mb-4">Contact</h4>
+            <a
+              href="mailto:info@autyn.ai"
+              className="inline-flex items-center gap-2 text-sm text-secondary-foreground/60 hover:text-primary transition-colors"
+            >
+              <Mail className="w-4 h-4" />
+              info@autyn.ai
+            </a>
           </div>
         </div>
 
