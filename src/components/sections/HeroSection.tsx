@@ -8,7 +8,7 @@ export const HeroSection = () => {
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-accent via-background to-muted -z-10" />
-      
+
       {/* Decorative elements */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl -z-10" />
@@ -34,14 +34,13 @@ export const HeroSection = () => {
             </motion.div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6">
-              More Loans.{" "}
-              <span className="gradient-text">Same Team.</span>
+              More Loans. <span className="gradient-text">Same Team.</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-              Autyn is the AI assistant that handles document intake, data verification, 
-              income calculations, and compliance checks—so your processing team can 
-              close <span className="text-secondary font-semibold">5x more loans</span>.
+              Autyn is the AI assistant that handles document intake, data verification, income calculations, and
+              compliance checks—so your processing team can close{" "}
+              <span className="text-secondary font-semibold">5x more loans</span>.
             </p>
 
             {/* CTAs */}
@@ -61,13 +60,11 @@ export const HeroSection = () => {
               transition={{ delay: 0.6 }}
               className="mt-12 pt-8 border-t border-border/50"
             >
-              <p className="text-sm text-muted-foreground mb-4">
-                Trusted by leading mortgage professionals
-              </p>
+              <p className="text-sm text-muted-foreground mb-4">Trusted by leading mortgage professionals</p>
               <div className="flex items-center justify-center lg:justify-start gap-8 opacity-50">
-                <div className="text-secondary font-semibold">Mortgage Co.</div>
-                <div className="text-secondary font-semibold">LendRight</div>
-                <div className="text-secondary font-semibold">HomeFirst</div>
+                <div className="text-secondary font-semibold">Nest & Key Mortgage</div>
+                <div className="text-secondary font-semibold">Adelo Mortgage</div>
+                <div className="text-secondary font-semibold">Massiff Mortgage Co.</div>
               </div>
             </motion.div>
           </motion.div>
@@ -87,7 +84,7 @@ export const HeroSection = () => {
                   <div className="w-3 h-3 rounded-full bg-yellow-400" />
                   <div className="w-3 h-3 rounded-full bg-green-400" />
                 </div>
-                
+
                 {/* Dashboard mockup */}
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 bg-muted rounded-lg">
@@ -104,7 +101,7 @@ export const HeroSection = () => {
                       ✓ Verified
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center justify-between p-4 bg-muted rounded-lg">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -119,7 +116,7 @@ export const HeroSection = () => {
                       Auto-calculated
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center justify-between p-4 bg-muted rounded-lg">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
