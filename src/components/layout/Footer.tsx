@@ -7,7 +7,6 @@ const footerLinks = {
     { name: "Features", href: "#features" },
     { name: "How It Works", href: "#solution" },
   ],
-  company: [{ name: "Contact", href: "#" }],
   legal: [
     { name: "Privacy Policy", href: "/privacy-policy", isRoute: true },
     { name: "Terms of Service", href: "/terms-of-service", isRoute: true },
