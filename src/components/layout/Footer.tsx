@@ -23,16 +23,9 @@ export const Footer = () => {
             <div className="mb-4">
               <img src={autynLogo} alt="Autyn" className="h-12 w-auto brightness-0 invert" />
             </div>
-            <p className="text-secondary-foreground/60 text-sm mb-4">
+            <p className="text-secondary-foreground/60 text-sm">
               AI-powered loan processing for the mortgage industry.
             </p>
-            <a
-              href="mailto:info@autyn.ai"
-              className="inline-flex items-center gap-2 text-sm text-secondary-foreground/60 hover:text-primary transition-colors"
-            >
-              <Mail className="w-4 h-4" />
-              info@autyn.ai
-            </a>
           </div>
 
           {/* Product */}
@@ -54,7 +47,17 @@ export const Footer = () => {
 
           {/* Legal */}
 
-          {/* Legal */}
+          {/* Contact */}
+          <div>
+            <h4 className="font-semibold mb-4">Contact</h4>
+            <a
+              href="mailto:info@autyn.ai"
+              className="inline-flex items-center gap-2 text-sm text-secondary-foreground/60 hover:text-primary transition-colors"
+            >
+              <Mail className="w-4 h-4" />
+              info@autyn.ai
+            </a>
+          </div>
           <div>
             <h4 className="font-semibold mb-4">Legal</h4>
             <ul className="space-y-3">
