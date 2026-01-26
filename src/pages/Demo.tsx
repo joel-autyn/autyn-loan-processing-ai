@@ -32,9 +32,7 @@ const Demo = () => {
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
                 Schedule Your <span className="gradient-text">Demo</span>
               </h1>
-              <p className="text-lg text-muted-foreground">
-                See how Autyn can help your team close more loans, faster.
-              </p>
+              <p className="text-lg text-muted-foreground">Close more loans with the same team.</p>
             </div>
 
             <div className="bg-card rounded-2xl shadow-xl p-8 border border-border">
