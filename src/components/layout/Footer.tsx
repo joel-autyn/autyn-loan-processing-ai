@@ -1,4 +1,5 @@
 import { Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 import autynLogo from "@/assets/autyn-logo.png";
 
 const footerLinks = {
@@ -15,7 +16,7 @@ const footerLinks = {
     { name: "Contact", href: "#" },
   ],
   legal: [
-    { name: "Privacy Policy", href: "#" },
+    { name: "Privacy Policy", href: "/privacy-policy", isRoute: true },
     { name: "Terms of Service", href: "#" },
     { name: "Security", href: "#" },
   ],
@@ -83,12 +84,21 @@ export const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-secondary-foreground/60 hover:text-primary transition-colors"
-                  >
-                    {link.name}
-                  </a>
+                  {'isRoute' in link && link.isRoute ? (
+                    <Link
+                      to={link.href}
+                      className="text-sm text-secondary-foreground/60 hover:text-primary transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="text-sm text-secondary-foreground/60 hover:text-primary transition-colors"
+                    >
+                      {link.name}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
