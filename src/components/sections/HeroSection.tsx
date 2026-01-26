@@ -52,10 +52,6 @@ export const HeroSection = () => {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
-              <Button variant="hero-outline" className="group">
-                <Play className="w-5 h-5" />
-                See How It Works
-              </Button>
             </div>
 
             {/* Trust indicators */}

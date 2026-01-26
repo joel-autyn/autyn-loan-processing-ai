@@ -21,7 +21,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            <img src={autynLogo} alt="Autyn" className="h-8 w-auto" />
+            <img src={autynLogo} alt="Autyn" className="h-12 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
@@ -39,7 +39,6 @@ export const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost">Log In</Button>
             <Button asChild>
               <Link to="/demo">Schedule a Demo</Link>
             </Button>
@@ -76,7 +75,6 @@ export const Navbar = () => {
                 </a>
               ))}
               <div className="flex flex-col gap-3 pt-4 border-t border-border">
-                <Button variant="outline" className="w-full">Log In</Button>
                 <Button className="w-full" asChild>
                   <Link to="/demo" onClick={() => setIsOpen(false)}>Schedule a Demo</Link>
                 </Button>
