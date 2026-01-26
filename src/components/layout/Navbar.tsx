@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import autynLogo from "@/assets/autyn-logo.png";
 
 const navLinks = [
-  { name: "Product", href: "#features" },
+  { name: "Features", href: "#features" },
   { name: "How It Works", href: "#solution" },
   { name: "Benefits", href: "#benefits" },
   { name: "About", href: "#about" },
