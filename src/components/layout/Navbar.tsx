@@ -21,7 +21,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            <img src={autynLogo} alt="Autyn" className="h-12 w-auto" />
+            <img src={autynLogo} alt="Autyn" className="h-16 w-auto" />
           </a>
 
           {/* Desktop Navigation */}

@@ -6,19 +6,13 @@ const footerLinks = {
   product: [
     { name: "Features", href: "#features" },
     { name: "How It Works", href: "#solution" },
-    { name: "Pricing", href: "#" },
-    { name: "Integrations", href: "#" },
   ],
   company: [
-    { name: "About", href: "#about" },
-    { name: "Careers", href: "#" },
-    { name: "Blog", href: "#" },
     { name: "Contact", href: "#" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy-policy", isRoute: true },
     { name: "Terms of Service", href: "/terms-of-service", isRoute: true },
-    { name: "Security", href: "#" },
   ],
 };
 
