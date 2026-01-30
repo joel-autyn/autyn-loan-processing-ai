@@ -38,9 +38,8 @@ export const HeroSection = () => {
             </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-              Autyn is the AI assistant that handles document intake, data verification, income calculations, and
-              compliance checks—so your processing team can close{" "}
-              <span className="text-secondary font-semibold">5x more loans</span>.
+              Skip the paperwork. Close the loans. Autyn handles intake, document review, and pre-underwriting — freeing
+              your team to do what they do best. <span className="text-secondary font-semibold">5x more loans</span>.
             </p>
 
             {/* CTAs */}
