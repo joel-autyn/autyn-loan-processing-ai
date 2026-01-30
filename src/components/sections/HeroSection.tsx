@@ -39,7 +39,7 @@ export const HeroSection = () => {
 
             <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
               Skip the paperwork. Close the loans. Autyn handles intake, document review, and pre-underwriting — freeing
-              your team to do what they do best. <span className="text-secondary font-semibold">5x more loans</span>.
+              your team to focus on originating loans and building relationships.
             </p>
 
             {/* CTAs */}
