@@ -73,7 +73,7 @@ const Security = () => {
                   <div>
                     <h2 className="text-xl font-semibold text-secondary mb-2">AI Privacy</h2>
                     <p className="text-muted-foreground">
-                      Personal information is scrubbed before feeding into AI models, ensuring your sensitive data never leaves our secure environment in identifiable form.
+                      We never send identifiable borrower data to AI systems. All personal information is anonymized within our secure infrastructure before processing.
                     </p>
                   </div>
                 </div>
