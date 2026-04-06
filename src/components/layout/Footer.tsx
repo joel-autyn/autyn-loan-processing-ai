@@ -61,22 +61,24 @@ export const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <div className="mb-4">
+            <div className="mb-4 flex items-center gap-3">
               <img
                 src={autynLogo}
                 alt="Autyn"
                 className="h-10 w-auto brightness-0 invert opacity-80"
               />
+              <span className="text-white/30">|</span>
+              <span className="text-xs text-white/40 font-medium">NMLS #: 2818898</span>
             </div>
             <p className="text-sm leading-relaxed text-white/40 max-w-[220px]">
               AI-powered loan processing for mortgage professionals.
             </p>
-            <div className="flex items-center gap-3 mt-4">
-              {/* Equal Housing Logo */}
-              <svg className="w-6 h-6 text-white/50" viewBox="0 0 24 24" fill="currentColor">
+            <div className="flex items-center gap-2 mt-4">
+              {/* Equal Housing Opportunity Logo */}
+              <svg className="w-8 h-8 text-white/50 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 1L1 8.5V10h1v12h20V10h1V8.5L12 1zm8 19H4V9.5l8-5.3 8 5.3V20zm-9-8h2v6h-2v-6zm-3 2h2v4H8v-4zm6 0h2v4h-2v-4z" />
               </svg>
-              <span className="text-xs text-white/40">NMLS #: 2818898</span>
+              <span className="text-xs text-white/40 leading-tight">Equal Housing<br />Opportunity</span>
             </div>
             <p className="mt-3 text-xs text-white/35">
               Licensing information available at{" "}
