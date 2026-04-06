@@ -55,7 +55,7 @@ const socialLinks = [
 ];
 
 export const Footer = () => {
-  return (
+  return ( 
     <footer className="bg-[hsl(220,15%,8%)] text-white/60">
       <div className="container-narrow py-10">
         {/* Main row — everything on one line on desktop */}
