@@ -56,7 +56,7 @@ export const SolutionSection = () => {
               transition={{ duration: 0.5, delay: 0.15 + index * 0.12 }}
               className="relative py-8 md:py-0 md:px-8 first:md:pl-0 last:md:pr-0 border-b md:border-b-0 md:border-l first:md:border-l-0 border-border last:border-b-0"
             >
-              <span className="text-[4.5rem] leading-none font-bold text-muted/80 block mb-4">
+              <span className="text-[4.5rem] leading-none font-bold text-muted-foreground/40 block mb-4">
                 {step.number}
               </span>
               <h3 className="text-xl font-bold mb-3">{step.title}</h3>
