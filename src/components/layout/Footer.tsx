@@ -57,117 +57,120 @@ const socialLinks = [
 export const Footer = () => {
   return (
     <footer className="bg-[hsl(220,15%,8%)] text-white/60">
-      <div className="container-narrow py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
-          {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
-            <div className="mb-4 flex items-center gap-3">
+      <div className="container-narrow py-10">
+        {/* Main row — everything on one line on desktop */}
+        <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-12 mb-8">
+          {/* Brand + NMLS */}
+          <div className="flex-shrink-0">
+            <div className="flex items-center gap-3 mb-3">
               <img
                 src={autynLogo}
                 alt="Autyn"
-                className="h-10 w-auto brightness-0 invert opacity-80"
+                className="h-8 w-auto brightness-0 invert opacity-80"
               />
-              <span className="text-white/30">|</span>
-              <span className="text-xs text-white/40 font-medium">NMLS #: 2818898</span>
+              <span className="text-white/20">|</span>
+              <span className="text-xs text-white/35">NMLS #: 2818898</span>
             </div>
-            <p className="text-sm leading-relaxed text-white/40 max-w-[220px]">
+            <p className="text-xs leading-relaxed text-white/30 max-w-[200px]">
               AI-powered loan processing for mortgage professionals.
             </p>
-            <div className="flex items-center gap-2 mt-4">
-              {/* Equal Housing Opportunity Logo */}
-              <svg className="w-8 h-8 text-white/50 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 1L1 8.5V10h1v12h20V10h1V8.5L12 1zm8 19H4V9.5l8-5.3 8 5.3V20zm-9-8h2v6h-2v-6zm-3 2h2v4H8v-4zm6 0h2v4h-2v-4z" />
-              </svg>
-              <span className="text-xs text-white/40 leading-tight">Equal Housing<br />Opportunity</span>
+          </div>
+
+          {/* Nav columns — tight together */}
+          <div className="flex gap-12 md:gap-16">
+            <div>
+              <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/25 font-semibold mb-3">
+                Product
+              </h4>
+              <ul className="space-y-2">
+                {footerLinks.product.map((link) => (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      className="text-sm text-white/45 hover:text-primary transition-colors duration-300"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <p className="mt-3 text-xs text-white/35">
-              Licensing information available at{" "}
+
+            <div>
+              <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/25 font-semibold mb-3">
+                Legal
+              </h4>
+              <ul className="space-y-2">
+                {footerLinks.legal.map((link) => (
+                  <li key={link.name}>
+                    {"isRoute" in link && link.isRoute ? (
+                      <Link
+                        to={link.href}
+                        className="text-sm text-white/45 hover:text-primary transition-colors duration-300"
+                      >
+                        {link.name}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="text-sm text-white/45 hover:text-primary transition-colors duration-300"
+                      >
+                        {link.name}
+                      </a>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/25 font-semibold mb-3">
+                Contact
+              </h4>
               <a
-                href="https://www.nmlsconsumeraccess.org"
+                href="mailto:info@autyn.ai"
+                className="inline-flex items-center gap-2 text-sm text-white/45 hover:text-primary transition-colors duration-300"
+              >
+                <Mail className="w-3.5 h-3.5" />
+                info@autyn.ai
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="pt-6 border-t border-white/6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+            <p className="text-[11px] text-white/20">
+              © {new Date().getFullYear()} Autyn. All rights reserved.
+            </p>
+            <div className="flex items-center gap-2">
+              <svg className="w-4 h-4 text-white/25" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L2 8v8l1 .5V9l9-4.5L21 9v7.5l1-.5V8L12 2zm0 2L4 8.5v7L12 20l8-4.5v-7L12 4zm0 2l6 3v5l-6 3-6-3v-5l6-3z" />
+              </svg>
+              <span className="text-[11px] text-white/20">Equal Housing Opportunity</span>
+            </div>
+            <p className="text-[11px] text-white/20">
+              Licensing info at{" "}
+              <a
+                href="https://nmlsconsumeraccess.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline hover:text-primary transition-colors duration-300"
+                className="underline hover:text-primary transition-colors"
               >
                 nmlsconsumeraccess.org
               </a>
             </p>
           </div>
 
-          {/* Product */}
-          <div>
-            <h4 className="text-xs tracking-[0.15em] uppercase text-white/30 font-semibold mb-5">
-              Product
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.product.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-white/50 hover:text-primary transition-colors duration-300"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h4 className="text-xs tracking-[0.15em] uppercase text-white/30 font-semibold mb-5">
-              Legal
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link.name}>
-                  {"isRoute" in link && link.isRoute ? (
-                    <Link
-                      to={link.href}
-                      className="text-sm text-white/50 hover:text-primary transition-colors duration-300"
-                    >
-                      {link.name}
-                    </Link>
-                  ) : (
-                    <a
-                      href={link.href}
-                      className="text-sm text-white/50 hover:text-primary transition-colors duration-300"
-                    >
-                      {link.name}
-                    </a>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-xs tracking-[0.15em] uppercase text-white/30 font-semibold mb-5">
-              Contact
-            </h4>
-            <a
-              href="mailto:info@autyn.ai"
-              className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-primary transition-colors duration-300"
-            >
-              <Mail className="w-4 h-4" />
-              info@autyn.ai
-            </a>
-          </div>
-        </div>
-
-        {/* Bottom */}
-        <div className="pt-8 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/25">
-            © {new Date().getFullYear()} Autyn. All rights reserved.
-          </p>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-4">
             {socialLinks.map((social) => (
               <a
                 key={social.name}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/25 hover:text-primary transition-colors duration-300"
+                className="text-white/20 hover:text-primary transition-colors duration-300"
               >
                 <span className="sr-only">{social.name}</span>
                 {social.icon}
