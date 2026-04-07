@@ -72,7 +72,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-10">
           {/* Column 1: Brand */}
           <div>
-            <img src={autynLogo} alt="Autyn" className="h-[18px] w-auto brightness-0 invert opacity-80 mb-3" />
+            <img src={autynLogo} alt="Autyn" className="h-[30px] w-auto brightness-0 invert opacity-80 mb-3" />
             <p className="text-sm text-white/35 mb-2">AI-powered loan processing for mortgage professionals.</p>
             <p className="text-sm text-white/35">NMLS #: 2818898</p>
           </div>
@@ -83,7 +83,10 @@ export const Footer = () => {
             <ul className="space-y-2">
               {footerLinks.product.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-sm text-white/45 hover:text-primary transition-colors duration-300">
+                  <a
+                    href={link.href}
+                    className="text-sm text-white/45 hover:text-primary transition-colors duration-300"
+                  >
                     {link.name}
                   </a>
                 </li>
@@ -98,11 +101,17 @@ export const Footer = () => {
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
                   {"isRoute" in link && link.isRoute ? (
-                    <Link to={link.href} className="text-sm text-white/45 hover:text-primary transition-colors duration-300">
+                    <Link
+                      to={link.href}
+                      className="text-sm text-white/45 hover:text-primary transition-colors duration-300"
+                    >
                       {link.name}
                     </Link>
                   ) : (
-                    <a href={link.href} className="text-sm text-white/45 hover:text-primary transition-colors duration-300">
+                    <a
+                      href={link.href}
+                      className="text-sm text-white/45 hover:text-primary transition-colors duration-300"
+                    >
                       {link.name}
                     </a>
                   )}
@@ -121,7 +130,10 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="mailto:info@autyn.ai" className="text-sm text-white/45 hover:text-primary transition-colors duration-300">
+                <a
+                  href="mailto:info@autyn.ai"
+                  className="text-sm text-white/45 hover:text-primary transition-colors duration-300"
+                >
                   Contact
                 </a>
               </li>
