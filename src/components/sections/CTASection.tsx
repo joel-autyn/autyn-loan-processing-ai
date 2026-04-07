@@ -27,8 +27,7 @@ export const CTASection = () => {
             <span className="serif font-normal text-primary">more loans?</span>
           </h2>
           <p className="text-white/50 text-lg mb-10 max-w-md mx-auto leading-relaxed">
-            See how Autyn can transform your team's output in a
-            15-minute live demo.
+            See how Autyn can transform your team's output in a 15-minute live demo.
           </p>
 
           <Button variant="hero" size="lg" className="group" asChild>
@@ -37,10 +36,6 @@ export const CTASection = () => {
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
-
-          <p className="mt-8 text-sm text-white/30">
-            No credit card required · 15-minute setup · Cancel anytime
-          </p>
         </motion.div>
       </div>
     </section>
