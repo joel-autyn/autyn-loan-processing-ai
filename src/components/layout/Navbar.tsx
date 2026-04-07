@@ -36,7 +36,7 @@ export const Navbar = () => {
       <div className="container-narrow">
         <div className="flex items-center justify-between h-16 md:h-[72px]">
           <Link to="/" className="flex items-center">
-            <img src={autynLogo} alt="Autyn" className="h-20 w-auto" />
+            <img src={autynLogo} alt="Autyn" className="h-14 w-auto py-1" />
           </Link>
 
           <div className="hidden md:flex items-center gap-10">
