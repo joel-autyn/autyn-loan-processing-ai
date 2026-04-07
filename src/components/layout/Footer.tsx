@@ -71,15 +71,12 @@ export const Footer = () => {
         {/* Brand row */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-3">
-            <img src={autynLogo} alt="Autyn" className="h-10 w-auto brightness-0 invert opacity-80" />
+            <img src={autynLogo} alt="Autyn" className="h-14 w-auto brightness-0 invert opacity-80" />
             <span className="text-white/20">|</span>
-            <span className="text-xs text-white/35">NMLS #: 2818898</span>
+            <span className="text-s text-white/35">NMLS #: 2818898</span>
             <span className="text-white/20">|</span>
-            <span className="text-xs text-white/35">AI-powered loan processing for mortgage professionals.</span>
+            <span className="text-s text-white/35">AI-powered loan processing for mortgage professionals.</span>
           </div>
-          <p className="text-xs leading-relaxed text-white/30 max-w-[260px]">
-            AI-powered loan processing for mortgage professionals.
-          </p>
         </div>
 
         {/* 3-column links row */}
