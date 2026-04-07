@@ -69,7 +69,7 @@ export const Footer = () => {
     <footer className="bg-[hsl(220,15%,8%)] text-white/60">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
         {/* 4-column grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[34%_22%_22%_22%] gap-10 lg:gap-8 mb-10">
           {/* Column 1: Brand */}
           <div>
             <img src={autynLogo} alt="Autyn" className="h-10 w-auto brightness-0 invert opacity-40 mb-3" />
