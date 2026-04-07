@@ -68,28 +68,22 @@ export const Footer = () => {
   return (
     <footer className="bg-[hsl(220,15%,8%)] text-white/60">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
-        {/* Brand row */}
-        <div className="mb-8">
-          <div className="flex items-center gap-3 mb-3">
-            <img src={autynLogo} alt="Autyn" className="h-14 w-auto brightness-0 invert opacity-80" />
-            <span className="text-white/20">|</span>
-            <span className="text-s text-white/35">NMLS #: 2818898</span>
-            <span className="text-white/20">|</span>
-            <span className="text-s text-white/35">AI-powered loan processing for mortgage professionals.</span>
+        {/* 4-column grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-10">
+          {/* Column 1: Brand */}
+          <div>
+            <img src={autynLogo} alt="Autyn" className="h-14 w-auto brightness-0 invert opacity-80 mb-3" />
+            <p className="text-sm text-white/35 mb-2">AI-powered loan processing for mortgage professionals.</p>
+            <p className="text-sm text-white/35">NMLS #: 2818898</p>
           </div>
-        </div>
 
-        {/* 2-column links row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8 mb-10 max-w-lg">
+          {/* Column 2: Product */}
           <div>
             <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/25 font-semibold mb-3">Product</h4>
             <ul className="space-y-2">
               {footerLinks.product.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-white/45 hover:text-primary transition-colors duration-300"
-                  >
+                  <a href={link.href} className="text-sm text-white/45 hover:text-primary transition-colors duration-300">
                     {link.name}
                   </a>
                 </li>
@@ -97,28 +91,40 @@ export const Footer = () => {
             </ul>
           </div>
 
+          {/* Column 3: Legal */}
           <div>
             <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/25 font-semibold mb-3">Legal</h4>
             <ul className="space-y-2">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
                   {"isRoute" in link && link.isRoute ? (
-                    <Link
-                      to={link.href}
-                      className="text-sm text-white/45 hover:text-primary transition-colors duration-300"
-                    >
+                    <Link to={link.href} className="text-sm text-white/45 hover:text-primary transition-colors duration-300">
                       {link.name}
                     </Link>
                   ) : (
-                    <a
-                      href={link.href}
-                      className="text-sm text-white/45 hover:text-primary transition-colors duration-300"
-                    >
+                    <a href={link.href} className="text-sm text-white/45 hover:text-primary transition-colors duration-300">
                       {link.name}
                     </a>
                   )}
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Column 4: Company */}
+          <div>
+            <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/25 font-semibold mb-3">Company</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/about" className="text-sm text-white/45 hover:text-primary transition-colors duration-300">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <a href="mailto:info@autyn.ai" className="text-sm text-white/45 hover:text-primary transition-colors duration-300">
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -145,10 +151,7 @@ export const Footer = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <a
-              href="mailto:info@autyn.ai"
-              className="text-white/20 hover:text-primary transition-colors duration-300"
-            >
+            <a href="mailto:info@autyn.ai" className="text-white/20 hover:text-primary transition-colors duration-300">
               <span className="sr-only">Email</span>
               <Mail className="w-[18px] h-[18px]" />
             </a>
