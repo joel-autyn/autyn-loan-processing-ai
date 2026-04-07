@@ -175,17 +175,6 @@ export const Footer = () => {
               <EqualHousingLogo />
               <span className="text-[11px] text-white/20">Equal Housing Opportunity</span>
             </div>
-            <p className="text-[11px] text-white/20">
-              Licensing info at{" "}
-              <a
-                href="https://nmlsconsumeraccess.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-primary transition-colors"
-              >
-                nmlsconsumeraccess.org
-              </a>
-            </p>
             <p className="text-[11px] text-white/20">© {new Date().getFullYear()} Autyn. All rights reserved.</p>
           </div>
         </div>
