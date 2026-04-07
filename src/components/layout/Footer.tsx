@@ -72,9 +72,17 @@ export const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-10">
           {/* Column 1: Brand */}
           <div>
-            <img src={autynLogo} alt="Autyn" className="h-[60px] w-auto brightness-0 invert opacity-80 mb-3" />
+            <img src={autynLogo} alt="Autyn" className="h-[60px] w-auto brightness-0 invert opacity-80 mb-5" />
             <p className="text-sm text-white/35 mb-2">AI-powered loan processing for mortgage professionals.</p>
-            <p className="text-sm text-white/35">NMLS #: 2818898</p>
+            <p className="text-sm text-white/35 mb-1">NMLS #: 2818898</p>
+            <a
+              href="https://nmlsconsumeraccess.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-white/35 underline hover:text-primary transition-colors"
+            >
+              NMLS Consumer Access
+            </a>
           </div>
 
           {/* Column 2: Product */}
