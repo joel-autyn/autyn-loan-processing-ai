@@ -131,8 +131,26 @@ export const Footer = () => {
 
         {/* Bottom bar */}
         <div className="pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/20 hover:text-primary transition-colors duration-300"
+              >
+                <span className="sr-only">{social.name}</span>
+                {social.icon}
+              </a>
+            ))}
+            <a href="mailto:info@autyn.ai" className="text-white/20 hover:text-primary transition-colors duration-300">
+              <span className="sr-only">Email</span>
+              <Mail className="w-[18px] h-[18px]" />
+            </a>
+          </div>
+
           <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
-            <p className="text-[11px] text-white/20">© {new Date().getFullYear()} Autyn. All rights reserved.</p>
             <div className="flex items-center gap-2">
               <EqualHousingLogo />
               <span className="text-[11px] text-white/20">Equal Housing Opportunity</span>
@@ -148,25 +166,7 @@ export const Footer = () => {
                 nmlsconsumeraccess.org
               </a>
             </p>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <a href="mailto:info@autyn.ai" className="text-white/20 hover:text-primary transition-colors duration-300">
-              <span className="sr-only">Email</span>
-              <Mail className="w-[18px] h-[18px]" />
-            </a>
-            {socialLinks.map((social) => (
-              <a
-                key={social.name}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/20 hover:text-primary transition-colors duration-300"
-              >
-                <span className="sr-only">{social.name}</span>
-                {social.icon}
-              </a>
-            ))}
+            <p className="text-[11px] text-white/20">© {new Date().getFullYear()} Autyn. All rights reserved.</p>
           </div>
         </div>
       </div>
