@@ -145,6 +145,13 @@ export const Footer = () => {
           </div>
 
           <div className="flex items-center gap-4">
+            <a
+              href="mailto:info@autyn.ai"
+              className="text-white/20 hover:text-primary transition-colors duration-300"
+            >
+              <span className="sr-only">Email</span>
+              <Mail className="w-[18px] h-[18px]" />
+            </a>
             {socialLinks.map((social) => (
               <a
                 key={social.name}
