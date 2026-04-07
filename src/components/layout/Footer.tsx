@@ -71,11 +71,7 @@ export const Footer = () => {
         {/* Brand row */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-3">
-            <img
-              src={autynLogo}
-              alt="Autyn"
-              className="h-10 w-auto brightness-0 invert opacity-80"
-            />
+            <img src={autynLogo} alt="Autyn" className="h-20 w-auto brightness-0 invert opacity-80" />
             <span className="text-white/20">|</span>
             <span className="text-xs text-white/35">NMLS #: 2818898</span>
           </div>
@@ -87,9 +83,7 @@ export const Footer = () => {
         {/* 3-column links row */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 mb-10">
           <div>
-            <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/25 font-semibold mb-3">
-              Product
-            </h4>
+            <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/25 font-semibold mb-3">Product</h4>
             <ul className="space-y-2">
               {footerLinks.product.map((link) => (
                 <li key={link.name}>
@@ -105,9 +99,7 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/25 font-semibold mb-3">
-              Legal
-            </h4>
+            <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/25 font-semibold mb-3">Legal</h4>
             <ul className="space-y-2">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
@@ -132,9 +124,7 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/25 font-semibold mb-3">
-              Contact
-            </h4>
+            <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/25 font-semibold mb-3">Contact</h4>
             <a
               href="mailto:info@autyn.ai"
               className="inline-flex items-center gap-2 text-sm text-white/45 hover:text-primary transition-colors duration-300"
@@ -148,9 +138,7 @@ export const Footer = () => {
         {/* Bottom bar */}
         <div className="pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
-            <p className="text-[11px] text-white/20">
-              © {new Date().getFullYear()} Autyn. All rights reserved.
-            </p>
+            <p className="text-[11px] text-white/20">© {new Date().getFullYear()} Autyn. All rights reserved.</p>
             <div className="flex items-center gap-2">
               <EqualHousingLogo />
               <span className="text-[11px] text-white/20">Equal Housing Opportunity</span>
