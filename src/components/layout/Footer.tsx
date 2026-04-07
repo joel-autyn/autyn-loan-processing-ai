@@ -79,8 +79,8 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* 3-column links row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 mb-10">
+        {/* 2-column links row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8 mb-10 max-w-lg">
           <div>
             <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/25 font-semibold mb-3">Product</h4>
             <ul className="space-y-2">
@@ -120,17 +120,6 @@ export const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
-
-          <div>
-            <h4 className="text-[11px] tracking-[0.15em] uppercase text-white/25 font-semibold mb-3">Contact</h4>
-            <a
-              href="mailto:info@autyn.ai"
-              className="inline-flex items-center gap-2 text-sm text-white/45 hover:text-primary transition-colors duration-300"
-            >
-              <Mail className="w-3.5 h-3.5" />
-              info@autyn.ai
-            </a>
           </div>
         </div>
 
