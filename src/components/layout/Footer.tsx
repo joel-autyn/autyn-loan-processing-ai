@@ -69,10 +69,10 @@ export const Footer = () => {
     <footer className="bg-[hsl(220,15%,8%)] text-white/60">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
         {/* 4-column grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-10 lg:items-start">
           {/* Column 1: Brand */}
-          <div>
-            <img src={autynLogo} alt="Autyn" className="h-[60px] w-auto brightness-0 invert opacity-80 mb-3" />
+          <div className="flex flex-col">
+            <img src={autynLogo} alt="Autyn" className="h-[75px] w-auto brightness-0 invert opacity-80 mb-3 -mt-[30px]" />
             <p className="text-sm text-white/35 mb-2">AI-powered loan processing for mortgage professionals.</p>
             <p className="text-sm text-white/35">NMLS #: 2818898</p>
           </div>
