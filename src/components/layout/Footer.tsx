@@ -75,7 +75,7 @@ export const Footer = () => {
             <img
               src={autynLogo}
               alt="Autyn"
-              className="h-[60px] w-auto brightness-0 invert opacity-80 mb-3 -mt-[30px]"
+              className="h-[45px] w-auto brightness-0 invert opacity-80 mb-3 -mt-[30px]"
             />
             <p className="text-sm text-white/35 mb-2">AI-powered loan processing for mortgage professionals.</p>
             <p className="text-sm text-white/35">NMLS #: 2818898</p>
