@@ -36,7 +36,7 @@ export const Navbar = () => {
       <div className="container-narrow">
         <div className="flex items-center justify-between h-16 md:h-[72px]">
           <Link to="/" className="flex items-center">
-            <img src={autynLogo} alt="Autyn" className="h-16 w-auto" />
+            <img src={autynLogo} alt="Autyn" className="h-20 w-auto" />
           </Link>
 
           <div className="hidden md:flex items-center gap-10">
@@ -58,10 +58,7 @@ export const Navbar = () => {
             </Button>
           </div>
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-foreground"
-          >
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 text-foreground">
             {isOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
