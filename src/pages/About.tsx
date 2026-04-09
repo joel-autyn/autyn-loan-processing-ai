@@ -5,9 +5,8 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-// Placeholder photos until actual headshots are added
-const myraPhoto = "/myra.png";
-const joelPhoto = "/joel.png";
+import myraPhoto from "@/assets/myra.png";
+import joelPhoto from "@/assets/joel.png";
 
 const founders = [
   {
