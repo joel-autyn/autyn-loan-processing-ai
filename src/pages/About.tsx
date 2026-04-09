@@ -5,9 +5,9 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-// Replace these with actual headshot imports once added to src/assets/
-import myraPhoto from "@/assets/myra.jpg";
-import joelPhoto from "@/assets/joel.jpg";
+// Placeholder photos until actual headshots are added
+const myraPhoto = "/placeholder.svg";
+const joelPhoto = "/placeholder.svg";
 
 const founders = [
   {
