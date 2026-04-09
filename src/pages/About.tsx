@@ -1,11 +1,7 @@
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
-// Replace these with actual headshot imports once added to src/assets/
 import myraPhoto from "@/assets/myra.png";
 import joelPhoto from "@/assets/joel.png";
 
@@ -94,11 +90,11 @@ const About = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
                 >
-                  <div className="aspect-[4/3] rounded-xl overflow-hidden bg-muted mb-6">
+                  <div className="aspect-square rounded-xl overflow-hidden bg-muted mb-6 max-w-[320px]">
                     <img
                       src={founder.photo}
                       alt={founder.name}
-                      className="w-full h-full object-cover object-top"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                   <h3 className="text-xl xl:text-2xl font-bold mb-1">{founder.name}</h3>
@@ -111,31 +107,6 @@ const About = () => {
                 </motion.div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-20 md:py-28 xl:py-32 bg-muted border-t border-border">
-          <div className="container-narrow text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <h2 className="text-2xl sm:text-3xl xl:text-4xl font-bold mb-4">
-                Want to see Autyn in action?
-              </h2>
-              <p className="text-muted-foreground mb-8 max-w-md mx-auto">
-                Book a 15-minute demo and see how we can help your team close
-                more loans.
-              </p>
-              <Button variant="hero" size="lg" className="group" asChild>
-                <Link to="/demo">
-                  Schedule a Demo
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-            </motion.div>
           </div>
         </section>
       </main>
