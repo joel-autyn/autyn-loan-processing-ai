@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 // Placeholder photos until actual headshots are added
-const myraPhoto = "/placeholder.svg";
-const joelPhoto = "/placeholder.svg";
+const myraPhoto = "/myra.png";
+const joelPhoto = "/joel.png";
 
 const founders = [
   {
