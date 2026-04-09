@@ -8,6 +8,7 @@ import Demo from "./pages/Demo";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Security from "./pages/Security";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 
