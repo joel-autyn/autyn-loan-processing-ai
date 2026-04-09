@@ -34,12 +34,12 @@ export const SolutionSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-16 xl:mb-20"
         >
           <p className="text-sm tracking-[0.2em] uppercase text-primary font-semibold mb-4">
             How It Works
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight max-w-xl">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold leading-tight max-w-xl">
             Three steps to{" "}
             <span className="serif font-normal text-primary">
               5× productivity
@@ -54,13 +54,13 @@ export const SolutionSection = () => {
               initial={{ opacity: 0, y: 24 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.15 + index * 0.12 }}
-              className="relative py-8 md:py-0 md:px-8 first:md:pl-0 last:md:pr-0 border-b md:border-b-0 md:border-l first:md:border-l-0 border-border last:border-b-0"
+              className="relative py-8 md:py-0 md:px-8 xl:px-10 first:md:pl-0 last:md:pr-0 border-b md:border-b-0 md:border-l first:md:border-l-0 border-border last:border-b-0"
             >
-              <span className="text-[4.5rem] leading-none font-bold text-muted-foreground/40 block mb-4">
+              <span className="text-[4.5rem] xl:text-[5.5rem] leading-none font-bold text-muted/80 block mb-4">
                 {step.number}
               </span>
-              <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-              <p className="text-muted-foreground text-[15px] leading-relaxed">
+              <h3 className="text-xl xl:text-2xl font-bold mb-3">{step.title}</h3>
+              <p className="text-muted-foreground text-[15px] xl:text-base leading-relaxed">
                 {step.description}
               </p>
             </motion.div>

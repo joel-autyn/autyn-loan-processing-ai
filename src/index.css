@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&family=Instrument+Serif:ital@0;1&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&family=Instrument+Serif:ital@0;1&display=swap');
 
 @layer base {
   :root {
@@ -15,11 +15,9 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 15%;
 
-    /* Autyn Orange — used sparingly as accent */
     --primary: 18 89% 54%;
     --primary-foreground: 0 0% 100%;
 
-    /* Rich dark */
     --secondary: 220 15% 12%;
     --secondary-foreground: 40 20% 97%;
 
@@ -112,11 +110,33 @@
 
 @layer components {
   .section-padding {
-    @apply py-24 md:py-32 lg:py-40;
+    @apply py-20 md:py-28 lg:py-32 xl:py-36;
   }
 
+  /* Responsive container: wider on large screens */
   .container-narrow {
-    @apply max-w-6xl mx-auto px-5 sm:px-8 lg:px-10;
+    @apply mx-auto px-5 sm:px-8 lg:px-10;
+    max-width: 1152px;
+  }
+
+  @media (min-width: 1440px) {
+    .container-narrow {
+      max-width: 1280px;
+    }
+  }
+
+  @media (min-width: 1680px) {
+    .container-narrow {
+      max-width: 1440px;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .container-narrow {
+      max-width: 1600px;
+    }
   }
 
   .serif {

@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import {
-  FolderOpen,
   ShieldCheck,
   Calculator,
   Brain,
@@ -54,12 +53,12 @@ export const FeaturesSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-20 max-w-xl"
+          className="mb-16 xl:mb-20 max-w-xl"
         >
           <p className="text-sm tracking-[0.2em] uppercase text-primary font-semibold mb-4">
             Capabilities
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold leading-tight">
             Built for{" "}
             <span className="serif font-normal text-primary">
               mortgage professionals
@@ -74,13 +73,13 @@ export const FeaturesSection = () => {
               initial={{ opacity: 0, y: 16 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + index * 0.08 }}
-              className="group grid md:grid-cols-[200px_1fr] lg:grid-cols-[240px_1fr] gap-4 md:gap-8 py-8 border-b border-border last:border-0"
+              className="group grid md:grid-cols-[240px_1fr] xl:grid-cols-[300px_1fr] gap-4 md:gap-8 xl:gap-12 py-8 xl:py-10 border-b border-border last:border-0"
             >
               <div className="flex items-start gap-3">
                 <feature.icon className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                <h3 className="text-base font-bold">{feature.title}</h3>
+                <h3 className="text-base xl:text-lg font-bold">{feature.title}</h3>
               </div>
-              <p className="text-muted-foreground text-[15px] leading-relaxed md:max-w-lg">
+              <p className="text-muted-foreground text-[15px] xl:text-base leading-relaxed md:max-w-2xl">
                 {feature.description}
               </p>
             </motion.div>
