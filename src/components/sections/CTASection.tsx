@@ -37,9 +37,6 @@ export const CTASection = () => {
             </Link>
           </Button>
 
-          <p className="mt-8 text-sm text-white/30">
-            No credit card required · 15-minute setup · Cancel anytime
-          </p>
         </motion.div>
       </div>
     </section>
