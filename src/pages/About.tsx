@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 // Replace these with actual headshot imports once added to src/assets/
-import myraPhoto from "@/assets/myra.jpg";
-import joelPhoto from "@/assets/joel.jpg";
+import myraPhoto from "@/assets/myra.png";
+import joelPhoto from "@/assets/joel.png";
 
 const founders = [
   {
