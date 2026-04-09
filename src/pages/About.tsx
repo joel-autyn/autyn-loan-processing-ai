@@ -79,8 +79,8 @@ const About = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
                 >
-                  <div className="aspect-[4/3] rounded-xl overflow-hidden bg-muted mb-6">
-                    <img src={founder.photo} alt={founder.name} className="w-full h-full object-cover object-top" />
+                  <div className="aspect-square rounded-xl overflow-hidden bg-muted mb-6 max-w-[280px]">
+                    <img src={founder.photo} alt={founder.name} className="w-full h-full object-cover object-center" />
                   </div>
                   <h3 className="text-xl font-bold mb-1">{founder.name}</h3>
                   <p className="text-primary font-medium text-sm mb-4">{founder.role}</p>
