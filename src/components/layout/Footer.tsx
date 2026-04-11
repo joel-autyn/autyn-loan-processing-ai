@@ -74,15 +74,7 @@ export const Footer = () => {
           <div>
             <img src={autynLogo} alt="Autyn" className="h-10 w-auto brightness-0 invert opacity-40 mb-3" />
             <p className="text-sm text-white/35 mb-2">AI-powered loan processing for mortgage professionals.</p>
-            <p className="text-sm text-white/35 mb-1">NMLS #: 2818898</p>
-            <a
-              href="https://nmlsconsumeraccess.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-white/35 underline hover:text-primary transition-colors"
-            >
-              NMLS Consumer Access
-            </a>
+            <p className="text-sm text-white/35">NMLS #: <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/2818898" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">2818898</a></p>
           </div>
 
           {/* Column 2: Product */}
