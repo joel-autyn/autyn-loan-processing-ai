@@ -1,35 +1,25 @@
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { FileSearch, Brain, CheckCircle2, Send } from "lucide-react";
 
 const steps = [
   {
     number: "01",
-    icon: FileSearch,
-    title: "Intake any loan file",
+    title: "Upload",
     description:
-      "Drop documents in any format and any order. Autyn classifies W-2s, pay stubs, tax returns, bank statements, 1003s, and 50+ document types automatically.",
+      "Drop your loan documents in any format, any order. Autyn takes it from there.",
   },
   {
     number: "02",
-    icon: Brain,
-    title: "Calculate FNMA-eligible income",
+    title: "Analyze",
     description:
-      "Handles salaried, self-employed, commission, variable, and rental income against Fannie Mae and Freddie Mac guidelines. Surfaces every number with its source.",
+      "AI classifies documents, extracts data, verifies the 1003, calculates income, and flags issues — in seconds.",
   },
   {
     number: "03",
-    icon: CheckCircle2,
-    title: "Identify conditions before pre-approval",
+    title: "Close",
     description:
-      "Autyn flags missing documents, discrepancies, and required conditions before the file ever reaches an underwriter. No more back-and-forth.",
-  },
-  {
-    number: "04",
-    icon: Send,
-    title: "One-click approval to the borrower",
-    description:
-      "Your loan officer reviews the AI’s work, approves in a single click, and Autyn sends the pre-approval letter — with a full audit trail attached.",
+      "Your team gets a clean, organized file with actionable insights. Focus on decisions, not data entry.",
   },
 ];
 
@@ -38,63 +28,42 @@ export const SolutionSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section
-      id="how-it-works"
-      className="section-padding bg-background"
-      ref={ref}
-      aria-labelledby="solution-heading"
-    >
+    <section id="solution" className="section-padding bg-background" ref={ref}>
       <div className="container-narrow">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="max-w-2xl mb-16 xl:mb-20"
+          className="mb-16 xl:mb-20"
         >
-          <p className="text-[11px] tracking-[0.2em] uppercase text-primary font-semibold mb-5">
-            How Autyn works
+          <p className="text-sm tracking-[0.2em] uppercase text-primary font-semibold mb-4">
+            How It Works
           </p>
-          <h2
-            id="solution-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.5rem] font-bold leading-[1.08] mb-6 text-balance"
-          >
-            From raw documents to{" "}
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold leading-tight max-w-xl">
+            Three steps to{" "}
             <span className="serif font-normal text-primary">
-              one-click approval
-            </span>{" "}
-            — in 10 minutes.
+              5× productivity
+            </span>
           </h2>
-          <p className="text-muted-foreground text-lg xl:text-xl leading-relaxed">
-            Autyn compresses 2–4 hours of pre-approval work into a ten-minute
-            workflow that a single loan officer can run end-to-end. Human in
-            the loop. Full explainability. Zero rip-and-replace.
-          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-5 xl:gap-6">
+        <div className="grid md:grid-cols-3 gap-0">
           {steps.map((step, index) => (
-            <motion.article
+            <motion.div
               key={step.number}
               initial={{ opacity: 0, y: 24 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
-              className="group relative p-7 xl:p-8 rounded-2xl border border-border bg-card hover:border-primary/40 hover:shadow-xl transition-all duration-300"
+              transition={{ duration: 0.5, delay: 0.15 + index * 0.12 }}
+              className="relative py-8 md:py-0 md:px-8 xl:px-10 first:md:pl-0 last:md:pr-0 border-b md:border-b-0 md:border-l first:md:border-l-0 border-border last:border-b-0"
             >
-              <div className="flex items-start justify-between mb-10">
-                <div className="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
-                  <step.icon className="w-5 h-5" />
-                </div>
-                <span className="text-sm font-mono text-muted-foreground/50">
-                  {step.number}
-                </span>
-              </div>
-              <h3 className="text-lg xl:text-xl font-bold mb-3 tracking-tight">
-                {step.title}
-              </h3>
-              <p className="text-muted-foreground text-[14px] xl:text-[15px] leading-relaxed">
+              <span className="text-[4.5rem] xl:text-[5.5rem] leading-none font-bold text-muted-foreground/30 block mb-4">
+                {step.number}
+              </span>
+              <h3 className="text-xl xl:text-2xl font-bold mb-3">{step.title}</h3>
+              <p className="text-muted-foreground text-[15px] xl:text-base leading-relaxed">
                 {step.description}
               </p>
-            </motion.article>
+            </motion.div>
           ))}
         </div>
       </div>

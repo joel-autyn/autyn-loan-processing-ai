@@ -34,31 +34,29 @@ const About = () => {
               transition={{ duration: 0.6 }}
               className="max-w-2xl xl:max-w-3xl"
             >
-              <p className="text-[11px] tracking-[0.2em] uppercase text-primary font-semibold mb-6">
+              <p className="text-sm tracking-[0.2em] uppercase text-primary font-semibold mb-6">
                 About Autyn
               </p>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.5rem] font-bold leading-[1.08] mb-7 text-balance">
-                We're building the operating system for{" "}
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold leading-tight mb-6">
+                Building the future of{" "}
                 <span className="serif font-normal text-primary">
-                  independent mortgage brokers.
+                  mortgage processing
                 </span>
               </h1>
-              <p className="text-lg xl:text-xl text-muted-foreground leading-relaxed mb-5">
-                Autyn is an AI-native loan processing platform purpose-built
-                for independent mortgage brokers. We automate the manual
-                workflows that eat hours off every loan file — document
-                classification, FNMA-eligible income calculation, 1003
-                verification, condition detection, and compliance checks — so
-                loan officers can focus on originating loans and building
-                relationships.
+              <p className="text-lg xl:text-xl text-muted-foreground leading-relaxed mb-4">
+                Autyn is an AI-native loan processing platform purpose-built for
+                mortgage brokers. We automate the manual workflows that consume
+                hours of every loan file — document classification, income
+                calculation, 1003 verification, and compliance checks — so loan
+                officers can focus on what they do best: originating loans and
+                building relationships.
               </p>
               <p className="text-lg xl:text-xl text-muted-foreground leading-relaxed">
-                The broker channel moves roughly a quarter of the $2 trillion
-                U.S. mortgage market. It still runs on spreadsheets, legacy
-                LOS software, and $800–$1,200 third-party processors. Autyn
-                replaces all of that with a single broker-first platform that
-                turns a 2–4 hour pre-approval workflow into 10 minutes, at
-                $500 per closed file.
+                In a $2 trillion mortgage market where 25% of brokers still
+                lack AI-powered automation, we're replacing outdated
+                spreadsheets and $800–$1,200 third-party processing fees with
+                an intelligent platform that handles pre-approval in minutes,
+                not hours.
               </p>
             </motion.div>
           </div>

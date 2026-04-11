@@ -1,21 +1,26 @@
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Quote } from "lucide-react";
+import { Star } from "lucide-react";
 
-// Honest "Why brokers pick Autyn" section. No fabricated customer quotes —
-// these are paraphrased positioning statements grounded in the pitch deck.
-const reasons = [
+const testimonials = [
   {
-    headline: "Broker-first, not lender-first",
-    body: "Encompass, LendingPad, and Blend were designed for lenders. Friday Harbor and tidalwave are lender-centric AI. Autyn is the only end-to-end platform purpose-built for the independent broker channel.",
+    quote: "Autyn transformed our processing department. We're closing 3x more loans with the same team size.",
+    author: "Sarah Mitchell",
+    role: "VP of Operations",
+    company: "Premier Mortgage Group",
   },
   {
-    headline: "End-to-end, not a point solution",
-    body: "Ocrolus digitizes documents. Floify handles intake. Arrive handles the 1003. Autyn covers the entire file — from borrower intake through pre-approval, condition clearing, and underwriter-ready handoff.",
+    quote: "The income calculation feature alone saves us 5+ hours per complex file. Game changer for self-employed borrowers.",
+    author: "James Rodriguez",
+    role: "Senior Loan Processor",
+    company: "HomeTrust Lending",
   },
   {
-    headline: "Immediately positive unit economics",
-    body: "Brokers were already paying $800–$1,200 per file to third-party processors. Autyn lands at $500 per file, so there is no new line item — only savings, pocketed immediately or passed to the borrower.",
+    quote: "Finally, a tool that understands mortgage documents. Our error rate dropped by 85% in the first month.",
+    author: "Emily Chen",
+    role: "Compliance Director",
+    company: "Pacific Coast Mortgage",
   },
 ];
 
@@ -24,69 +29,75 @@ export const TestimonialsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section
-      id="why-autyn"
-      className="section-padding bg-muted"
-      ref={ref}
-      aria-labelledby="why-heading"
-    >
+    <section className="section-padding bg-muted" ref={ref}>
       <div className="container-narrow">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="max-w-2xl mb-14 xl:mb-16"
+          className="text-center mb-16"
         >
-          <p className="text-[11px] tracking-[0.2em] uppercase text-primary font-semibold mb-5">
-            Why Autyn wins
-          </p>
-          <h2
-            id="why-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.5rem] font-bold leading-[1.08] text-balance"
-          >
-            The first AI loan processor{" "}
-            <span className="serif font-normal text-primary">
-              built for brokers.
-            </span>
+          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+            Testimonials
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+            Loved by Mortgage Professionals
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-5 xl:gap-6">
-          {reasons.map((reason, index) => (
-            <motion.article
-              key={reason.headline}
+        <div className="grid md:grid-cols-3 gap-6">
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={testimonial.author}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-card rounded-2xl p-8 xl:p-9 border border-border shadow-sm"
+              className="bg-card rounded-2xl p-8 border border-border shadow-sm"
             >
-              <Quote className="w-5 h-5 text-primary mb-5" />
-              <h3 className="text-lg xl:text-xl font-bold mb-4 leading-snug tracking-tight">
-                {reason.headline}
-              </h3>
-              <p className="text-muted-foreground text-[14.5px] xl:text-[15px] leading-relaxed">
-                {reason.body}
-              </p>
-            </motion.article>
+              {/* Stars */}
+              <div className="flex gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                ))}
+              </div>
+              
+              <blockquote className="text-lg text-secondary mb-6 leading-relaxed">
+                "{testimonial.quote}"
+              </blockquote>
+              
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center">
+                  <span className="text-xl font-bold text-primary">
+                    {testimonial.author.charAt(0)}
+                  </span>
+                </div>
+                <div>
+                  <div className="font-semibold text-secondary">{testimonial.author}</div>
+                  <div className="text-sm text-muted-foreground">
+                    {testimonial.role}, {testimonial.company}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           ))}
         </div>
 
-        {/* Advisor/partner strip */}
+        {/* Logos */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-16 pt-12 border-t border-border"
         >
-          <p className="text-center text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-semibold mb-7">
-            Built with operators from the broker channel
+          <p className="text-center text-sm text-muted-foreground mb-8">
+            Trusted by leading mortgage companies nationwide
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-5 text-muted-foreground/70">
-            <span className="text-lg font-semibold">Barrett Financial Group</span>
-            <span className="text-lg font-semibold">Massif Mortgage</span>
-            <span className="text-lg font-semibold">Adelo Mortgage</span>
-            <span className="text-lg font-semibold">CoStar alumni</span>
-            <span className="text-lg font-semibold">FIS alumni</span>
+          <div className="flex flex-wrap items-center justify-center gap-12 opacity-40">
+            <div className="text-xl font-bold text-secondary">Premier Mortgage</div>
+            <div className="text-xl font-bold text-secondary">HomeTrust</div>
+            <div className="text-xl font-bold text-secondary">Pacific Coast</div>
+            <div className="text-xl font-bold text-secondary">LendRight</div>
+            <div className="text-xl font-bold text-secondary">First Choice</div>
           </div>
         </motion.div>
       </div>

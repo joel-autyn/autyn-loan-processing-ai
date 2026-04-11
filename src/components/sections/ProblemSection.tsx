@@ -1,31 +1,13 @@
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 const painPoints = [
-  {
-    stat: "5–9 hrs",
-    label: "of manual workflows on every loan file",
-  },
-  {
-    stat: "$800–$1,200",
-    label: "per file paid to third-party loan processors",
-  },
-  {
-    stat: "$200–$350",
-    label: "per file for loan assistants on top of that",
-  },
-  {
-    stat: "60%",
-    label: "of a broker's day lost to data entry and admin",
-  },
-  {
-    stat: "27,600+",
-    label: "loan officers still running this manually",
-  },
-  {
-    stat: "0",
-    label: "end-to-end AI platforms built for broker workflows",
-  },
+  "Sorting documents by hand for every file",
+  "Chasing borrowers for missing paperwork",
+  "Cross-checking 1003 fields line by line",
+  "Manually calculating self-employed income",
+  "Worrying about compliance gaps",
 ];
 
 export const ProblemSection = () => {
@@ -33,71 +15,51 @@ export const ProblemSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section
-      id="problem"
-      className="py-24 md:py-32 xl:py-40 bg-[hsl(220,15%,8%)] relative overflow-hidden"
-      ref={ref}
-      aria-labelledby="problem-heading"
-    >
-      <div className="absolute top-0 left-0 w-1 h-full bg-primary" />
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[700px] h-[700px] bg-primary/5 rounded-full blur-[140px]" />
-
-      <div className="container-narrow relative">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-16 xl:mb-20"
-        >
-          <p className="text-[11px] tracking-[0.2em] uppercase text-primary font-semibold mb-5">
-            The broker problem
-          </p>
-          <h2
-            id="problem-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.08] mb-7 text-balance"
+    <section className="py-20 md:py-28 xl:py-36 bg-[hsl(220,15%,12%)]" ref={ref}>
+      <div className="container-narrow">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 xl:gap-28 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
           >
-            A $2&nbsp;trillion market{" "}
-            <span className="serif font-normal text-white/55">
-              still runs on spreadsheets.
-            </span>
-          </h2>
-          <p className="text-white/60 text-lg xl:text-xl leading-relaxed max-w-2xl">
-            Independent mortgage brokers originate nearly a quarter of U.S. home
-            loans — and almost none of them have access to real AI. Every loan
-            file bounces through manual intake, legacy LOS software, and
-            expensive third-party processors before it reaches an underwriter.
-          </p>
-        </motion.div>
+            <h2 className="text-3xl sm:text-4xl xl:text-5xl font-bold text-white leading-tight mb-6">
+              Your processors are talented.
+              <br />
+              <span className="serif font-normal text-white/50">
+                They're just buried.
+              </span>
+            </h2>
+            <p className="text-white/50 text-lg xl:text-xl leading-relaxed">
+              Every loan file brings the same bottlenecks. The work is
+              repetitive, error-prone, and draining — and it's keeping your
+              team from the work that actually matters.
+            </p>
+          </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-2xl overflow-hidden">
-          {painPoints.map((point, index) => (
-            <motion.div
-              key={point.label}
-              initial={{ opacity: 0, y: 12 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.4, delay: 0.15 + index * 0.06 }}
-              className="bg-[hsl(220,15%,8%)] p-7 xl:p-9"
-            >
-              <div className="text-3xl xl:text-4xl font-bold text-primary tracking-tight mb-2">
-                {point.stat}
-              </div>
-              <p className="text-white/55 text-sm xl:text-[15px] leading-relaxed">
-                {point.label}
-              </p>
-            </motion.div>
-          ))}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.15 }}
+          >
+            <ul className="space-y-0">
+              {painPoints.map((point, index) => (
+                <motion.li
+                  key={point}
+                  initial={{ opacity: 0, x: 12 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.25 + index * 0.08 }}
+                  className="flex items-center gap-4 py-5 xl:py-6 border-b border-white/8 last:border-0"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                  <span className="text-white/70 text-[15px] xl:text-base">
+                    {point}
+                  </span>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
         </div>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-14 text-center text-white/45 text-sm xl:text-base max-w-2xl mx-auto"
-        >
-          Tools like Encompass, LendingPad, and Blend were built for lenders.
-          Brokers have been left with manual workflows, incomplete files, and
-          margin pressure. Autyn is the first platform built for them.
-        </motion.p>
       </div>
     </section>
   );
