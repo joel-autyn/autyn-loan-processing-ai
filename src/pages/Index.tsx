@@ -5,7 +5,10 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { SolutionSection } from "@/components/sections/SolutionSection";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
+import { PricingSection } from "@/components/sections/PricingSection";
 import { StatsSection } from "@/components/sections/StatsSection";
+import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { Footer } from "@/components/layout/Footer";
 
@@ -32,7 +35,10 @@ const Index = () => {
         <ProblemSection />
         <SolutionSection />
         <FeaturesSection />
+        <PricingSection />
         <StatsSection />
+        <TestimonialsSection />
+        <FAQSection />
         <CTASection />
       </main>
       <Footer />

@@ -1,44 +1,50 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import {
-  ShieldCheck,
+  Layers,
   Calculator,
-  Brain,
-  Bell,
+  ShieldCheck,
+  Users,
   Plug,
+  LineChart,
 } from "lucide-react";
 
 const features = [
   {
-    icon: Brain,
-    title: "Intelligent Document Recognition",
+    icon: Layers,
+    title: "End-to-end platform",
     description:
-      "Instantly identifies W-2s, pay stubs, tax returns, bank statements, and 50+ document types. Every document sorted, labeled, and stacked for review.",
+      "Pre-approval and full loan processing in a single workflow. Not a point solution bolted onto your LOS — a broker-first operating system that takes you from borrower intake to underwriter handoff.",
   },
   {
     icon: Calculator,
-    title: "Income Calculated in Seconds",
+    title: "FNMA-grade income engine",
     description:
-      "Handle complex scenarios instantly — self-employed, commission, variable income, rental, and more. No more spreadsheets, no more guesswork.",
+      "Handles W-2, self-employed, commission, variable, and rental income. Tuned to GSE guidelines plus the specific overlays of your wholesale lenders.",
   },
   {
     icon: ShieldCheck,
-    title: "1003 Verification & Compliance",
+    title: "Explainable AI with a full audit trail",
     description:
-      "Automated data verification catches discrepancies before underwriting. Built-in Fannie Mae & Freddie Mac rule checks keep you compliant.",
+      "Every decision Autyn makes is traceable. See why a document was flagged, how income was calculated, and why a condition was added — on the record, every time.",
   },
   {
-    icon: Bell,
-    title: "Smart Alerts",
+    icon: Users,
+    title: "Broker-first workflows",
     description:
-      "Proactive notifications about missing documents, data discrepancies, and potential issues — before they become problems.",
+      "Built around how independent brokers actually work — orchestrating borrower, realtor, title, appraisal, and underwriter in a single view. Not a lender tool with a broker skin.",
   },
   {
     icon: Plug,
-    title: "Works With Your Stack",
+    title: "Works with your existing stack",
     description:
-      "Native integrations with your existing LOS and CRM. MISMO XML export, API access, and zero disruption to your current workflow.",
+      "Integrates with leading LOS and CRM platforms, supports MISMO XML export, and offers an API for custom workflows. No rip-and-replace, no retraining your team.",
+  },
+  {
+    icon: LineChart,
+    title: "Smarter with every loan",
+    description:
+      "Autyn learns from every file it touches. Pre-approvals get faster, condition detection gets sharper, and income calculations stay in lockstep with evolving guidelines.",
   },
 ];
 
@@ -47,42 +53,52 @@ export const FeaturesSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="features" className="section-padding bg-muted" ref={ref}>
+    <section
+      id="platform"
+      className="section-padding bg-muted"
+      ref={ref}
+      aria-labelledby="features-heading"
+    >
       <div className="container-narrow">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-16 xl:mb-20 max-w-xl"
+          className="max-w-2xl mb-16 xl:mb-20"
         >
-          <p className="text-sm tracking-[0.2em] uppercase text-primary font-semibold mb-4">
-            Capabilities
+          <p className="text-[11px] tracking-[0.2em] uppercase text-primary font-semibold mb-5">
+            The platform
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold leading-tight">
-            Built for{" "}
+          <h2
+            id="features-heading"
+            className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.5rem] font-bold leading-[1.08] text-balance"
+          >
+            Everything a broker needs{" "}
             <span className="serif font-normal text-primary">
-              mortgage professionals
+              in one platform.
             </span>
           </h2>
         </motion.div>
 
-        <div className="space-y-0">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 xl:gap-6">
           {features.map((feature, index) => (
-            <motion.div
+            <motion.article
               key={feature.title}
               initial={{ opacity: 0, y: 16 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 + index * 0.08 }}
-              className="group grid md:grid-cols-[240px_1fr] xl:grid-cols-[300px_1fr] gap-4 md:gap-8 xl:gap-12 py-8 xl:py-10 border-b border-border last:border-0"
+              transition={{ duration: 0.5, delay: 0.08 + index * 0.07 }}
+              className="p-7 xl:p-8 rounded-2xl bg-card border border-border hover:border-primary/40 hover:shadow-lg transition-all duration-300"
             >
-              <div className="flex items-start gap-3">
-                <feature.icon className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                <h3 className="text-base xl:text-lg font-bold">{feature.title}</h3>
+              <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6">
+                <feature.icon className="w-5 h-5" />
               </div>
-              <p className="text-muted-foreground text-[15px] xl:text-base leading-relaxed md:max-w-2xl">
+              <h3 className="text-lg font-bold mb-3 tracking-tight">
+                {feature.title}
+              </h3>
+              <p className="text-muted-foreground text-[14.5px] leading-relaxed">
                 {feature.description}
               </p>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

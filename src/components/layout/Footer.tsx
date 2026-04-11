@@ -4,9 +4,10 @@ import autynLogo from "@/assets/autyn-logo.png";
 
 const footerLinks = {
   product: [
-    { name: "How It Works", href: "#solution" },
-    { name: "Features", href: "#features" },
-    { name: "Results", href: "#results" },
+    { name: "How it works", href: "#how-it-works" },
+    { name: "Platform", href: "#platform" },
+    { name: "Pricing", href: "#pricing" },
+    { name: "FAQ", href: "#faq" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy-policy", isRoute: true },
